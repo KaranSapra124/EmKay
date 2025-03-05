@@ -1,0 +1,379 @@
+/* AboutUs.css */
+
+.about-us-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+section {
+  padding: 80px 0;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  text-align: center;
+  padding: 100px 0;
+  background-color: var(--primary-color);
+  background-size: cover;
+  background-position: center;
+  color: var(--text-color-light);
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: 900;
+  color: var(--fourth-color);
+}
+
+.subtitle {
+  font-size: 20px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  color:white;
+  padding: 0 1rem;
+}
+
+/* Our Story Section Styles */
+.our-story-section {
+  background-color: var(--light-bg);
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.content {
+  flex: 1;
+  padding: 1rem;
+}
+
+.image-container {
+  flex: 1;
+}
+
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  
+}
+
+.rounded-image {
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+@media screen and (max-width:600px) {
+  .rounded-image{
+    width: 99.5%;
+  }
+  
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: var(--title-color);
+  font-weight: 800;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+/* Mission and Vision Section Styles */
+.mission-vision-section {
+  background-color: white;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+@media screen and (max-width:600px) {
+  .grid-container{
+    margin: 0 1.5rem;
+  }
+  
+}
+
+.mission-box, .vision-box, .values-box {
+  background-color: var(--light-bg);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+  border-bottom: 4px solid var(--third-color);
+}
+
+.mission-box {
+  border-bottom-color: var(--primary-color);
+}
+
+.vision-box {
+  border-bottom-color: var(--secondary-color);
+}
+
+.values-box {
+  border-bottom-color: var(--third-color);
+}
+
+.mission-box:hover, .vision-box:hover, .values-box:hover {
+  transform: translateY(-10px);
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: var(--text-color-dark);
+  font-weight: 900;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+/* Team Section Styles */
+.team-section {
+  background-color: var(--light-bg);
+  text-align: center;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.team-member {
+  text-align: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+}
+
+.member-image {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(45, 109, 191, 0.2);
+  border: 4px solid var(--third-color);
+}
+
+h4 {
+  font-size: 22px;
+  margin-bottom: 5px;
+  color: var(--text-color-dark);
+  font-weight: 800;
+}
+
+.designation {
+  font-size: 16px;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  font-weight: 900;
+}
+
+.bio {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Stats Section Styles */
+.stats-section {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+}
+
+.stats-section h2 {
+  color: var(--fourth-color);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.stat-box {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.stat-box h3 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: var(--third-color);
+  font-weight: 900;
+}
+
+.stat-box p {
+  font-size: 16px;
+  color: var(--text-color-light);
+}
+
+/* Testimonials Section Styles */
+.testimonials-section {
+  background-color: var(--light-bg);
+  text-align: center;
+}
+
+.testimonial {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  border-left: 5px solid var(--third-color);
+}
+
+.quote {
+  font-size: 18px;
+  line-height: 1.8;
+  font-style: italic;
+  position: relative;
+  padding: 0 30px;
+}
+
+.quote::before, .quote::after {
+  content: '"';
+  font-size: 60px;
+  color: var(--secondary-color);
+  position: absolute;
+  opacity: 0.3;
+}
+
+.quote::before {
+  top: -20px;
+  left: 0;
+}
+
+.quote::after {
+  bottom: -50px;
+  right: 0;
+}
+
+.client-name {
+  margin-top: 20px;
+  font-weight: 600;
+  color: var(--text-color-dark);
+}
+
+/* CTA Section Styles */
+.cta-section {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.cta-section h2 {
+  color: var(--fourth-color);
+}
+
+.cta-section p {
+  color: var(--text-color-light);
+}
+
+.cta-button {
+  background-color: var(--third-color);
+  color: var(--text-color-dark);
+  border: none;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: 800;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--fourth-color);
+  transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .grid-container, .team-grid, .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container, .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-section h1 {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    color:white
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  section {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-section {
+    padding: 70px 0;
+  }
+
+  .hero-section h1 {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    color:white
+  }
+}

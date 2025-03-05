@@ -1,0 +1,140 @@
+.client-section {
+  padding: 60px 0;
+  background-color: var(--light-bg);
+  overflow: hidden;
+}
+
+.client-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.client-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--title-color);
+  margin-bottom: 20px;
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background-color: var(--border-color);
+  margin: 0 auto 40px;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.carousel-track-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  align-items: center;
+  animation: slide 30s linear infinite;
+  width: max-content;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move by half the width (first set of clients) */
+  }
+}
+
+.client-logo-container {
+  flex: 0 0 auto;
+  width: 180px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 30px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.client-logo-container:hover {
+  transform: scale(1.05);
+}
+
+.carousel-track:hover {
+  animation-play-state: paused; /* Pause animation on hover */
+}
+
+.client-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Gradient overlays for blur effect */
+.carousel-gradient-left,
+.carousel-gradient-right {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.carousel-gradient-left {
+  left: 0;
+  background: linear-gradient(to right, var(--light-bg) 20%, rgba(246, 247, 251, 0) 100%);
+}
+
+.carousel-gradient-right {
+  right: 0;
+  background: linear-gradient(to left, var(--light-bg) 20%, rgba(246, 247, 251, 0) 100%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .client-logo-container {
+    width: 150px;
+    height: 100px;
+    margin: 0 20px;
+  }
+
+  .carousel-gradient-left,
+  .carousel-gradient-right {
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .client-logo-container {
+    width: 120px;
+    height: 80px;
+    margin: 0 15px;
+  }
+
+  .carousel-gradient-left,
+  .carousel-gradient-right {
+    width: 40px;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
